@@ -1,1 +1,2 @@
-item
+@extends('loyouts.app')
+
