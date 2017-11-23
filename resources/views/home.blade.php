@@ -1,3 +1,4 @@
+@extends('loyouts.app')
+
 @section('content')
-home
     @endsection
