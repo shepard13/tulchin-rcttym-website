@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
+
+Route::get('/newsList', 'NewsListController@index');
+
+Route::get('/newsItem', 'NewsItemController@index');
+
+Route::get('/contacts', 'ContactsController@index');
