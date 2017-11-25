@@ -6,34 +6,34 @@ namespace App\Entities;
 class NewsItem implements \JsonSerializable {
 
     /**
-     * @var int Id of the NewsItem in database
+     * @var int Id of the news item in the database
      */
     private $id;
 
     /**
-     * @var string Title of the NewsItem
+     * @var string Title of the news item
      */
     private $title;
 
     /**
-     * @var string Short text of the NewsItem
+     * @var string Short text of the news item
      */
     private $shortBody;
 
     /**
-     * @var string Full text of this NewsItem
+     * @var string Full text of the news item
      */
     private $body;
 
     /**
      * Ingest constructor.
      *
-     * @param int    $id        Id of the NewsItem in database
-     * @param string $title     Title of the NewsItem
-     * @param string $shortBody Short text of the NewsItem
-     * @param string $body      Full text of the NewsItem
+     * @param int    $id        Id of the news item in the database
+     * @param string $title     Title of the news item
+     * @param string $shortBody Short text of the news item
+     * @param string $body      Full text of the news item
      */
-    public function __construct($id, $title, $shortBody, $body) {
+    public function __construct(int $id, string $title, string $shortBody, string $body) {
         $this->setId($id);
         $this->setTitle($title);
         $this->setShortBody($shortBody);
@@ -43,7 +43,7 @@ class NewsItem implements \JsonSerializable {
     /**
      * Id getter.
      *
-     * @return int Id of the NewsItem in database
+     * @return int Id of the news item in the database
      */
     public function getId() : int {
         return $this->id;
@@ -52,7 +52,7 @@ class NewsItem implements \JsonSerializable {
     /**
      * Id setter.
      *
-     * @param int Id of the NewsItem in database
+     * @param int $id Id of the news item in the database
      */
     private function setId(int $id) {
         $this->id = $id;
@@ -61,7 +61,7 @@ class NewsItem implements \JsonSerializable {
     /**
      * Title getter.
      *
-     * @return string Title of the NewsItem
+     * @return string Title of the news item
      */
     public function getTitle() : string {
         return $this->title;
@@ -70,17 +70,16 @@ class NewsItem implements \JsonSerializable {
     /**
      * Title setter.
      *
-     * @param string Title of the NewsItem
+     * @param string $title Title of the news item
      */
-    private function setTitle($title) {
-
+    private function setTitle(string $title) {
         $this->title = $title;
     }
 
     /**
      * ShortBody getter.
      *
-     * @return string Short text of the NewsItem
+     * @return string Short text of the news item
      */
     public function getShortBody() : string {
         return $this->shortBody;
@@ -89,17 +88,16 @@ class NewsItem implements \JsonSerializable {
     /**
      * ShortBody setter.
      *
-     * @param string Short text of the NewsItem
+     * @param string $shortBody Short text of the news item
      */
-    private function setShortBody($shortBody) {
-
+    private function setShortBody(string $shortBody) {
         $this->shortBody = $shortBody;
     }
 
     /**
      * Body getter.
      *
-     * @return string Full text of the NewsTitle
+     * @return string Full text of the news item
      */
     public function getBody() : string {
         return $this->body;
@@ -108,22 +106,21 @@ class NewsItem implements \JsonSerializable {
     /**
      * Body setter.
      *
-     * @param string Full text of the NewsItem
-     *
+     * @param string $body Full text of the news item
      */
-    private function setBody($body) {
+    private function setBody(string $body) {
         $this->body = $body;
     }
 
     /**
-     * Returns array with public data of the ingest.
+     * Returns array with public data of the news item.
      *
      * @return array
      */
     function jsonSerialize()     {
         return [
             'id' => $this->getId(),
-            'name' => $this->getTitle(),
+            'title' => $this->getTitle(),
             'shortBody' => $this->getShortBody(),
             'body' => $this->getBody(),
         ];
