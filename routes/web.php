@@ -13,8 +13,8 @@
 
 Route::get('/', 'HomeController@index');
 
-Route::get('/newsList', 'NewsListController@index');
+Route::get('/news', 'NewsController@newsList');
 
-Route::get('/newsItem', 'NewsItemController@index');
+Route::get('/news/{id}', 'NewsController@newsItem');
 
 Route::get('/contacts', 'ContactsController@index');

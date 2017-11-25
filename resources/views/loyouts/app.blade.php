@@ -110,15 +110,33 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="nav navbar">
         <hr class="hr-primary" />
         <ol class="breadcrumb bread-primary navbar-light bg-light">
-            <button href="#" class="btn btn-primary"><i class="fa fa-newspaper-o"></i>Головна</button>
-            <li><a href="#" class="btn btn-primary">Контакти</a></li>
-            <li><a href="#" class="btn btn-primary">Новини</a></li>
+            <button href="/home" class="btn btn-primary"><i class="fa fa-newspaper-o"></i>Головна</button>
+            <li><a href="/contacts" class="btn btn-primary">Контакти</a></li>
+            <li><a href="/news" class="btn btn-primary">Новини</a></li>
         </ol>
     </div>
 
+    <script>
+        function initMap() {
+            var uluru = {lat: -25.363, lng: 131.044};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+
+
+<div class="container">
+    @yield('content')
+</div>
 
     <div class="row">
         <div class="span3">
@@ -163,6 +181,9 @@
       </div>
          </div>!-->
 </div>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+</script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script>
