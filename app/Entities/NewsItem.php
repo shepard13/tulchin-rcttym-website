@@ -124,7 +124,7 @@ class NewsItem implements \JsonSerializable {
         return [
             'id' => $this->getId(),
             'name' => $this->getTitle(),
-            'shorBody' => $this->getShortBody(),
+            'shortBody' => $this->getShortBody(),
             'body' => $this->getBody(),
         ];
     }
