@@ -11,7 +11,7 @@ class NewsItem implements \JsonSerializable {
     private $id;
 
     /**
-     * @var string Title of the NewsItemm
+     * @var string Title of the NewsItem
      */
     private $title;
 
@@ -93,7 +93,7 @@ class NewsItem implements \JsonSerializable {
      */
     private function setShortBody($shortBody) {
 
-        $this->hostname = $shortBody;
+        $this->shortBody = $shortBody;
     }
 
     /**
@@ -120,7 +120,7 @@ class NewsItem implements \JsonSerializable {
      *
      * @return array
      */
-    function jsonSerialize() {
+    function jsonSerialize()     {
         return [
             'id' => $this->getId(),
             'name' => $this->getTitle(),
