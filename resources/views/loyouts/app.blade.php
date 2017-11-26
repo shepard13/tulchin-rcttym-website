@@ -9,18 +9,16 @@
     <link rel="stylesheet" href="/css/my.css">
     <![endif]-->
     <link rel="stylesheet" href="/css/rcnttym.css">
-    <title>title</title>
+    <title>Trcttym</title>
 </head>
 <body style="padding-top:20px">
-
 
 
 <div class="container">
     <div class="row">
         <div class="span3 pagination-centered">
 
-
-            <a href="/"><img style="padding-top:15px; padding-left:20px;" width=92% src="/img/logo.jpg" /></a>
+            <a href="/"><img style="padding-top:15px; padding-left:20px;" width=92% src="/img/logo.jpg"/></a>
 
             <!--   <div id="leftside"> !-->
 
@@ -69,7 +67,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img src="pulic/img/carousel/5.jpg" alt="">
+                        <img src="/img/carousel/5.jpg" alt="">
                         <div class="carousel-caption">
                             <h4>Відеостудія "Фокус"</h4>
                             <p>Зйомки нового фільму в цетральному парку м. Тульчина .</p>
@@ -109,86 +107,62 @@
             </div>
         </div>
     </div>
-
     <div class="nav navbar">
-        <hr class="hr-primary" />
+        <hr class="hr-primary"/>
         <ol class="breadcrumb bread-primary navbar-light bg-light">
             <button href="/home" class="btn btn-primary"><i class="fa fa-newspaper-o"></i>Головна</button>
             <li><a href="/contacts" class="btn btn-primary">Контакти</a></li>
             <li><a href="/news" class="btn btn-primary">Новини</a></li>
         </ol>
     </div>
-
-    <script>
-        function initMap() {
-            var uluru = {lat: -25.363, lng: 131.044};
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 4,
-                center: uluru
-            });
-            var marker = new google.maps.Marker({
-                position: uluru,
-                map: map
-            });
-        }
-    </script>
-
-
-<div class="container">
-    @yield('content')
 </div>
 
-    <div class="row">
-        <div class="span3">
+<div class="container" style="margin-top:40px">
+    <div class="row"        >
+        <div class="col-xs-10">
 
-            <div class="well pagination-centered">
-                <!-- SEARCH FORM!! !-->
-                <legend>Пошук на сайті</legend>
+            <div class="panel panel-default panel-horizontal">
+                <div class="row">
+                    <div class="span3">
 
-                <div class="control-group pagination-centered">
-                    <div class="controls">
-                        <div class="input-prepend">
-                <span class="add-on">
-                    <i class="icon-search"></i>
-                </span>
-                            <input class="span2" placeholder="Пошук" type="text" name="search_query" />
+                        <div class="pagination-centered ">
+                            <a href="http://www.mon.gov.ua/" target="_blank"><img style="margin:10px 0 0 0"
+                                                                                  src="/img/220x90_MONMS_static.gif"
+                                                                                  width="160"
+                                                                                  height="60"> </a>
+                            <a href="http://www.stepanivka.narod.ru/" target="_blank"><img style="margin:10px 0 0 0"
+                                                                                           src="/img/stepanivka.png">
+                            </a>
                         </div>
                     </div>
                 </div>
+                <div class="panel-body">
 
-                <div class="pagination-centered">
-                    <button class="btn-primary btn-small btn" type="submit"><i class="icon-search"></i> Знайти</button>
+                    <div class="container">
+                        <div class="col-lg-push-6">
+                        @yield('content')
+                    </div>
                 </div>
             </div>
 
-
-            <div class="pagination-centered">
-                <a href="http://www.mon.gov.ua/" target="_blank"><img style="margin:10px 0 0 0" src="/img/220x90_MONMS_static.gif" width="160" height="60"> </a>
-                <a href="http://www.stepanivka.narod.ru/" target="_blank"><img style="margin:10px 0 0 0" src="/img/stepanivka.png"> </a>
-            </div>
-
-        </div>
-
-
-        <div class="span9">
         </div>
     </div>
 </div>
-<!--     <div class="row">
-	<div class="span12">
 
-	    <p align="center">Copyright &copy; 2013 Тульчинський РЦНТТУМ | Site by Dead Dead133@gmail.com</p>
-      </div>
-         </div>!-->
+
+<div class="container">
+    <div class="bottom">
+        <p align="center">Copyright &copy; 2013 Тульчинський РЦНТТУМ | Site by Dead Dead133@gmail.com &
+            yurets.andrey13@gmail.com
+        </p>
+    </div>
 </div>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
-</script>
+
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script>
     !function ($) {
-        $(function(){
+        $(function () {
             // carousel demo
             $('#myCarousel').carousel()
         })

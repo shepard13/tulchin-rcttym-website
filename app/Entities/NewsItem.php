@@ -2,7 +2,6 @@
 
 namespace App\Entities;
 
-
 class NewsItem implements \JsonSerializable {
 
     /**

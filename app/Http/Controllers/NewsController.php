@@ -18,7 +18,7 @@ class NewsController extends Controller
     private function getNewsItemById(int $id)
     {
         foreach ($this->news as $newItem) {
-            if ($id === $newItem['id']){
+            if ($id === $newItem['id']) {
                 return $newItem;
             }
         }
@@ -33,8 +33,9 @@ class NewsController extends Controller
      */
     public function newsList()
     {
-        $newsItems = NewsItem::get();
-        return view('newsList', ['news' => $newsItems]);
+        $newsItems = \App\Models\NewsModel::getAllNewsItems();
+
+        return view('newsList', ['newsItems' => $newsItems]);
     }
 
     public function newsItem($id)

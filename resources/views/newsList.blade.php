@@ -1,19 +1,20 @@
 @extends('loyouts.app')
 
 @section('content')
-
     <div class="container">
-        <!-- Example row of columns -->
-        <div class="row">
-            @foreach($posts_news as $newsItem)
-                <h2>{{$newsItem['title']}}</h2>
-                {!! $newsItem['short_body'] !!}
+        <h1 class="text-left">News</h1>
 
-                <p><a class="btn btn-secondary" href="/news/{{$newsItem['id']}}" role="button">Докладніше &raquo;</a></p>
-            @endforeach
 
-            <hr>
-        </div>
+        @foreach($newsItems as $newsItem)
+            <h2>{{$newsItem->getTitle()}}</h2>
+            {!! $newsItem->getShortBody() !!}
+
+            <p><a class="btn btn-secondary" href="/news/{{$newsItem->getId()}}" role="button">Докладніше
+                    &raquo;</a></p>
+        @endforeach
+        <hr>
     </div>
+
+
 
 @endsection
